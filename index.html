@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header class="navbar bg-base-200 shadow-sm">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                     </svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
@@ -52,8 +48,7 @@
                     <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-quran"></i>Learn</a>
                 </li>
                 <li>
-                    <a href="" class="btn btn-outline btn-primary"><i
-                            class="fa-solid fa-right-from-bracket"></i>LogOut</a>
+                    <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-right-from-bracket"></i>LogOut</a>
                 </li>
             </ul>
         </div>
@@ -65,10 +60,8 @@
             <h2 class="text-4xl font-bold mb-8"><span class="text-sky-400">English</span> is Easy!! </h2>
             <p>আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের
                 Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-            <input class="mt-5 my-5 p-1 px-2 rounded-md shadow-sm" type="text" name="" id=""
-                placeholder="enter yore name"> <br>
-            <input class="p-1 px-2 rounded-md shadow-sm" type="password" name="" id=""
-                placeholder="enter yore pass....">
+            <input class="mt-5 my-5 p-1 px-2 rounded-md shadow-sm" type="text" name="" id="" placeholder="enter yore name"> <br>
+            <input class="p-1 px-2 rounded-md shadow-sm" type="password" name="" id="" placeholder="enter yore pass....">
         </div>
         <div class="img flex-1">
             <img src="assets/hero-student.png" alt="">
@@ -83,6 +76,11 @@
         </div>
     </section>
 
+    <!-- loading section -->
+    <section id="spinner" class="flex justify-center items-center hidden">
+        <span class="loading loading-bars loading-xl"></span>
+    </section>
+
     <!-- section-3 code -->
     <section id="word-container" class="bg-gray-100 grid grid-cols-1 md:grid-cols-3 gap-5 p-10 w-11/12 mx-auto my-10">
         <div class="text-center col-span-full rounded-xl py-10 space-y-6">
@@ -93,8 +91,11 @@
 
     <!-- Open the modal using ID.showModal() method -->
     <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
+            <div id="detailsContainer" class="space-y-5">
+                
+            </div>
             <h3 class="text-lg font-bold">Hello!</h3>
             <p class="py-4">Press ESC key or click the button below to close</p>
             <div class="modal-action">
@@ -108,5 +109,4 @@
 
     <script src="index.js"></script>
 </body>
-
 </html>
